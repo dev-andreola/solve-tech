@@ -24,7 +24,7 @@ const Intro = () => {
           >
             SolveTech é para Qualquer Tipo de Negócio!
           </h2>
-          <p className="text-md md:text-xl md-10 bg-gradient-to-l to-gray-900 from-gray-400 bg-clip-text text-transparent font-bold mb-4">
+          <p className="text-md md:text-xl md-10 bg-gradient-to-l to-gray-900 from-gray-500 bg-clip-text text-transparent font-bold mb-4">
             Autônomos, startups ou empresas. SolveTech é a única plataforma que
             você precisa para crescer o seu negócio.
           </p>
