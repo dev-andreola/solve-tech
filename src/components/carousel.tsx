@@ -61,14 +61,15 @@ const Carousel = () => {
       <div
         className="items-center justify-center flex text-3xl text-center font-bold pt-10 px-10
         bg-gradient-to-r
-        from-lime-500 to-lime-600
+        from-lime-600 to-lime-700
         bg-clip-text
         text-transparent
-
-        
+        max-w-3xl
+        mx-auto
         "
       >
-        Mais de 100+ empresas construiram seu negócio com SolveTech Software
+        Mais de 100+ empresas construiram seu negócio com os softwares da
+        SolveTech
       </div>
 
       <div className="grid grid-cols-2 p-4 place-content-center-center md:flex">

@@ -45,7 +45,7 @@ const ActionButtons = () => {
         <Button className="text-md" variant="outline">
           Criar Conta
         </Button>
-        <Button className="text-md bg-lime-600 hover:bg-lime-700">
+        <Button className="text-md bg-lime-700 hover:bg-lime-800">
           Fazer Login
         </Button>
       </div>
