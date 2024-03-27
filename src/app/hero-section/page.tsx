@@ -2,10 +2,10 @@ const HeroSection = () => {
   return (
     <section className="py-14 bg-gradient-to-r h-full to-white from-gray-200">
       <div className="container mx-auto text-center space-y-5">
-        <div className="text-4xl sm:text-6xl flex justify-center md:pb-3  font-bold md:px-20 text-gradient bg-gradient-to-r from-lime-600 to-lime-700 bg-clip-text text-transparent overflow-visible">
+        <h2 className="text-4xl sm:text-6xl flex justify-center md:pb-3  font-bold md:px-20 text-gradient bg-gradient-to-r from-lime-600 to-lime-700 bg-clip-text text-transparent overflow-visible">
           A simplicidade que você precisa, onde a tecnologia encontra a
           praticidade
-        </div>
+        </h2>
         <p className="text-md md:text-xl md-10 bg-gradient-to-r to-gray-900 from-gray-400 bg-clip-text text-transparent font-bold">
           Transformando suas necessidades em soluções tecnológicas eficientes.
         </p>
