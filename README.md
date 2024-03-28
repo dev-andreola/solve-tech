@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SolveTech Landing Page
 
-## Getting Started
+<img src="./public/readme-banner.png" align="center"/>
 
-First, run the development server:
+## Overview
 
-```bash
+Web design of a landing page for my fictional software development company.
+
+To develop this project I used next.js and styled it in a fully responsive way using tailwind and some components from shancn.ui
+
+Still in the development process...
+
+[View Project](https://solve-tech.vercel.app/)
+
+## :man_mechanic: Languages and Tools
+
+- Javascript
+- Next.js
+- Tailwind
+- Shadcn
+- Git
+
+<!-- ## :paintbrush: Layout
+
+### :desktop_computer: Desktop
+
+<img src="src/assets/readme-layout-desktop.jpg"/>
+
+### :iphone: Mobile
+
+<img src="src/assets/readme-layout-mobile.jpg" /> -->
+
+## :computer: Dependencies
+
+```shell
+# 1. Clone the project
+
+git clone https://github.com/dev-andreola/solve-tech.git
+
+# 2. Install dependencies
+
+npm install
+
+# 3. Run live server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :triangular_flag_on_post: Contribute to the project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The content **may contain some errors** as I am a student and the repository is constantly evolving.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## Learn More
+If you have any corrections or improvements that would make this better, please fork the repo and create a pull request.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/Feature`)
+3. Commit your Changes (`git commit -m 'Add some Feature'`)
+4. Push to the Branch (`git push origin feature/Feature`)
+5. Open a Pull Request
