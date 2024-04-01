@@ -56,7 +56,7 @@ const Features = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(".gsap-slide-up", {
+    gsap.to(".gsap-slide-up3", {
       opacity: 1,
       duration: 2,
       y: 0,
@@ -71,7 +71,7 @@ const Features = () => {
   }, []);
 
   return (
-    <div className="flex-col items-center justify-center max-w-6xl mx-auto pb-10 card-trigger gsap-slide-up opacity-0 -translate-y-4">
+    <div className="flex-col items-center justify-center max-w-6xl mx-auto pb-10 card-trigger gsap-slide-up3 opacity-0 -translate-y-4">
       <h2
         className="
                 text-4xl
