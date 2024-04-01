@@ -1,7 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
+
+import { gsap } from "gsap/gsap-core";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const featuresList = [
   {
@@ -50,8 +53,25 @@ const featuresList = [
 ];
 
 const Features = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".gsap-slide-up", {
+      opacity: 1,
+      duration: 2,
+      y: 0,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".card-trigger",
+        start: "top 70%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, []);
+
   return (
-    <div className="flex-col items-center justify-center max-w-6xl mx-auto pb-10">
+    <div className="flex-col items-center justify-center max-w-6xl mx-auto pb-10 card-trigger gsap-slide-up opacity-0 -translate-y-4">
       <h2
         className="
                 text-4xl
