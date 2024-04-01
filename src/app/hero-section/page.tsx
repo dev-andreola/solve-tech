@@ -27,14 +27,6 @@ const HeroSection = () => {
       ease: "power2.out",
       delay: 0.5,
     });
-
-    gsap.to(".gsap-side2", {
-      opacity: 1,
-      duration: 1,
-      x: 0,
-      ease: "power2.out",
-      delay: 0.5,
-    });
   }, []);
 
   return (
@@ -51,7 +43,7 @@ const HeroSection = () => {
           <button className="bg-gradient-to-r from-lime-600 to-lime-700 hover:from-lime-700 hover:to-lime-800 transition-colors duration-300 text-white px-10 py-4 rounded-md md:text-lg font-bold gsap-side translate-x-3 opacity-0">
             Começar
           </button>
-          <button className="px-10 py-4 text-nowrap rounded-md md:text-lg font-bold border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground gsap-side2 -translate-x-3 opacity-0">
+          <button className="px-10 py-4 text-nowrap rounded-md md:text-lg font-bold border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground gsap-side -translate-x-3 opacity-0">
             Saiba Mais
           </button>
         </div>
