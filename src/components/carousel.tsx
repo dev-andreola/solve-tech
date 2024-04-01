@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import Image from "next/image";
 
@@ -51,13 +53,27 @@ const Carousel = () => {
       );
     }, 5000);
 
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".gsap-opacity", {
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".gsap-opacity",
+        start: "top 70%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
     return () => {
       clearInterval(interval);
     };
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto gsap-opacity opacity-0">
       <div
         className="items-center justify-center flex text-3xl text-center font-bold pt-10 px-10
         bg-gradient-to-r
