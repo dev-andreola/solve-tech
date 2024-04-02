@@ -21,8 +21,17 @@ export default async function ActionButtons() {
   const user = await currentUser();
 
   return (
-    <div>
+    <div className="flex items-center justify-between gap-4">
       <div className="md:hidden">
+        {userId ? (
+          <div>
+            <UserButton afterSignOutUrl="/" />
+          </div>
+        ) : (
+          <div></div>
+        )}
+      </div>
+      <div className="sm:hidden">
         <Sheet>
           <SheetTrigger>
             <LuAlignJustify size={25} />
@@ -35,7 +44,7 @@ export default async function ActionButtons() {
                   <Link href={"/"}>Soluções</Link>
                   <Link href={"/"}>Contato</Link>
 
-                  {userId ? (
+                  {/* {userId ? (
                     <div className="flex items-center justify-between gap-4">
                       <h2>Olá {user.firstName}</h2>
                       <UserButton afterSignOutUrl="/" />
@@ -53,7 +62,7 @@ export default async function ActionButtons() {
                         </Button>
                       </Link>
                     </div>
-                  )}
+                  )} */}
                 </div>
               </SheetDescription>
             </SheetHeader>
@@ -61,7 +70,7 @@ export default async function ActionButtons() {
         </Sheet>
       </div>
       {userId ? (
-        <div className="flex items-center justify-between gap-4">
+        <div className="items-center justify-between gap-4 hidden md:flex">
           <h2>Olá {user.firstName}</h2>
           <UserButton afterSignOutUrl="/" />
         </div>
