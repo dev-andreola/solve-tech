@@ -31,7 +31,7 @@ export default async function ActionButtons() {
           <div></div>
         )}
       </div>
-      <div className="sm:hidden">
+      <div className="md:hidden">
         <Sheet>
           <SheetTrigger>
             <LuAlignJustify size={25} />
@@ -43,6 +43,16 @@ export default async function ActionButtons() {
                   <Link href={"/"}>SolveTech</Link>
                   <Link href={"/"}>Soluções</Link>
                   <Link href={"/"}>Contato</Link>
+                  <Link href={"/sign-in"}>
+                    <Button className="text-md bg-lime-700 hover:bg-lime-800">
+                      Fazer Login
+                    </Button>
+                  </Link>
+                  <Link href={"/sign-up"}>
+                    <Button className="text-md" variant="outline">
+                      Criar Conta
+                    </Button>
+                  </Link>
                 </div>
               </SheetDescription>
             </SheetHeader>
