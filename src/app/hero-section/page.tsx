@@ -32,7 +32,7 @@ const HeroSection = () => {
   return (
     <section className="py-14 bg-gradient-to-r h-full to-white from-gray-200">
       <div className="container mx-auto text-center space-y-5">
-        <h2 className="text-4xl sm:text-6xl flex justify-center md:pb-3  font-bold md:px-20 text-gradient bg-gradient-to-r from-lime-600 to-lime-700 bg-clip-text text-transparent overflow-visible opacity-0 translate-y-3 gsap-slide-up">
+        <h2 className="text-4xl sm:text-6xl flex justify-center font-bold md:px-20 text-gradient bg-gradient-to-r from-lime-600 to-lime-700 bg-clip-text text-transparent overflow-visible opacity-0 translate-y-3 gsap-slide-up">
           A simplicidade que você precisa, onde a tecnologia encontra a
           praticidade
         </h2>
