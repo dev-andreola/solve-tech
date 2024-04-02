@@ -1,3 +1,6 @@
+import { ClerkProvider } from "@clerk/nextjs";
+import { ptBR } from "@clerk/localizations";
+
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
@@ -17,11 +20,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={font.className}>
-        <Navbar />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider
+      localization={ptBR}
+      appearance={{
+        variables: { colorPrimary: "#4d7c0f" },
+        elements: {},
+      }}
+    >
+      <html lang="pt-br">
+        <body className={font.className}>
+          <Navbar />
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

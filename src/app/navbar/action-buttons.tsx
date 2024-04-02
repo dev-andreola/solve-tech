@@ -12,8 +12,14 @@ import {
 import { LuAlignJustify } from "react-icons/lu";
 
 import Link from "next/link";
+import { auth, currentUser } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 
-const ActionButtons = () => {
+export default async function ActionButtons() {
+  const { userId } = auth();
+
+  const user = await currentUser();
+
   return (
     <div>
       <div className="md:hidden">
@@ -29,28 +35,50 @@ const ActionButtons = () => {
                   <Link href={"/"}>Soluções</Link>
                   <Link href={"/"}>Contato</Link>
 
-                  <Button className="text-md bg-lime-600 hover:bg-lime-700">
-                    Fazer Login
-                  </Button>
-                  <Button className="text-md" variant="outline">
-                    Criar Conta
-                  </Button>
+                  {userId ? (
+                    <div className="flex items-center justify-between gap-4">
+                      <h2>Olá {user.firstName}</h2>
+                      <UserButton afterSignOutUrl="/" />
+                    </div>
+                  ) : (
+                    <div className="flex flex-col items-center justify-start gap-4">
+                      <Link href={"/sign-in"}>
+                        <Button className="text-md bg-lime-700 hover:bg-lime-800">
+                          Fazer Login
+                        </Button>
+                      </Link>
+                      <Link href={"/sign-up"}>
+                        <Button className="text-md" variant="outline">
+                          Criar Conta
+                        </Button>
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </SheetDescription>
             </SheetHeader>
           </SheetContent>
         </Sheet>
       </div>
-      <div className="hidden md:flex md:space-x-4">
-        <Button className="text-md" variant="outline">
-          Criar Conta
-        </Button>
-        <Button className="text-md bg-lime-700 hover:bg-lime-800">
-          Fazer Login
-        </Button>
-      </div>
+      {userId ? (
+        <div className="flex items-center justify-between gap-4">
+          <h2>Olá {user.firstName}</h2>
+          <UserButton afterSignOutUrl="/" />
+        </div>
+      ) : (
+        <div className="hidden md:flex md:space-x-4">
+          <Link href={"/sign-in"}>
+            <Button className="text-md bg-lime-700 hover:bg-lime-800">
+              Fazer Login
+            </Button>
+          </Link>
+          <Link href={"/sign-up"}>
+            <Button className="text-md" variant="outline">
+              Criar Conta
+            </Button>
+          </Link>
+        </div>
+      )}
     </div>
   );
-};
-
-export default ActionButtons;
+}
