@@ -43,26 +43,6 @@ export default async function ActionButtons() {
                   <Link href={"/"}>SolveTech</Link>
                   <Link href={"/"}>Soluções</Link>
                   <Link href={"/"}>Contato</Link>
-
-                  {/* {userId ? (
-                    <div className="flex items-center justify-between gap-4">
-                      <h2>Olá {user.firstName}</h2>
-                      <UserButton afterSignOutUrl="/" />
-                    </div>
-                  ) : (
-                    <div className="flex flex-col items-center justify-start gap-4">
-                      <Link href={"/sign-in"}>
-                        <Button className="text-md bg-lime-700 hover:bg-lime-800">
-                          Fazer Login
-                        </Button>
-                      </Link>
-                      <Link href={"/sign-up"}>
-                        <Button className="text-md" variant="outline">
-                          Criar Conta
-                        </Button>
-                      </Link>
-                    </div>
-                  )} */}
                 </div>
               </SheetDescription>
             </SheetHeader>
@@ -71,7 +51,7 @@ export default async function ActionButtons() {
       </div>
       {userId ? (
         <div className="items-center justify-between gap-4 hidden md:flex">
-          <h2>Olá {user.firstName}</h2>
+          <h2>Olá, {user!.firstName}</h2>
           <UserButton afterSignOutUrl="/" />
         </div>
       ) : (
